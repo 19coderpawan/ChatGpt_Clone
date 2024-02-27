@@ -1,0 +1,318 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    background:rgb(3,0,31);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    cursor: url(/src/assets/rocket.svg) auto;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+      flex-direction: column;
+      overflow: hidden;
+    }
+  
+     .sidebarsection{
+        border-bottom: 1px solid grey;
+     }
+     .lowerbody{
+        margin-bottom:20px;
+     }
+    .mainbody {
+      /* margin-left: 0; */
+      margin:0;
+      
+      /* flex:1; */
+      width:100%;
+      /* width: 100%; */
+     
+    }
+  
+    .chatsection {
+      padding: 1rem;
+      max-width: 70rem;
+    }
+  
+    .lowerbody {
+      padding-left: 2rem;
+    }
+  
+    /* You may need to adjust other styles accordingly for better responsiveness */
+  }
+
+.container{
+    min-height: 100vh;
+    display: flex;
+    gap:3rem;
+}
+
+
+/* sidebar btn styling */
+.openbtn{
+    display: flex;
+    cursor: pointer;
+    border:none;
+    height:50%;
+    border-radius:10px;
+    background-color:rgba(28,30,58,1);
+    color:white;
+    /* visibility: hidden; */
+}
+.closebtn{
+    display: flex;
+    cursor: pointer;
+    border:none;
+    height:50%;
+    border-radius:10px;
+    background-color:rgba(28,30,58,1);
+    color:white;
+    /* visibility: hidden; */
+}
+/* sidebar btn styling ends here */
+
+/* toogle bar functionality styling ends here */
+/* .sidebar-toggle-btn{
+    display: none;
+} */
+
+/* Sidebar Styling  started here */
+.sidebarsection{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex:3;
+    border-right: 1px solid grey;
+    margin-bottom: 0;
+}
+.upperbody{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding:2rem;
+    /* flex:5; */
+}
+.upperbody1{
+    margin:2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+    padding-bottom: 2rem;
+}
+.appname{
+    font-size:1.5rem;
+}
+.chatgptlogo{
+    animation:rotatelogo 8s infinite linear;
+}
+@keyframes rotatelogo{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+.btn{
+    display: flex;
+    margin-left: 12px;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid white;
+}
+.newchat{
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    gap:1rem;
+    align-items: center;
+    width:100%;
+    height:50px;
+    background: rgb(85, 160, 160);
+    color:white;
+    border-radius:10px;
+    border:none;
+    font-weight: bolder;
+}
+.newchat:active{
+    background-color: rgb(57, 181, 181);
+    border:1px solid white
+}
+.add{
+    width:30px;
+}
+
+.upperbody2{
+    margin:1rem;
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+    padding: 1rem;
+}
+.query1{
+    display: flex;
+    align-items: center;
+    gap:4rem;
+    padding:10px;
+    font-size: 1.5rem;
+    width: 100%;
+    height: 50px;
+    color:white;
+    background: black;
+    border:1px solid white;
+    border-radius:15px;
+    border-bottom-left-radius:2px ;
+    cursor: pointer;
+}
+.query1:active{
+    border:2px solid white;
+}
+.query2{
+    display: flex;
+    align-items: center;
+    gap:4rem;
+    padding:10px;
+    font-size: 1.5rem;
+    width: 100%;
+    height: 50px;
+    color:white;
+    background: black;
+    border:1px solid white;
+    border-radius:15px;
+    border-bottom-left-radius:2px ;
+    cursor: pointer;
+    margin-bottom: 100px;
+}
+.query2:active{
+    border:2px solid white;
+}
+
+/* Lower Body of the sidebar styling start here */
+.lowerbody{
+    border-top:1px solid grey;
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+    /* margin-bottom: 0; */
+    /* flex:3; */
+}
+.home{
+    margin-top:4rem;
+}
+.home,.saved,.upgrade{
+    display: flex;
+    gap:3rem;
+    /* margin-top:4rem; */
+    align-items: center;
+    padding-left: 4rem;;
+    font-size:1.5rem;
+
+}
+/* Lower Body of the Sidebar styling ends here */
+
+/* Sidebar section styling ends here */
+
+/* Main Chat Section styling starts here */
+.mainbody{
+    min-height: calc(100vh - 14rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    /* margin:6rem 10rem;
+    flex:9; */
+    /* margin-bottom: 0; */
+}
+.chats{
+    display:flex;
+    flex-direction: column;
+    /* gap:1rem; */
+    
+}
+.chatsection{
+    display: flex;
+    flex-direction: row;
+    margin:1rem;
+    padding:2rem 3rem;
+    font-size:1.2rem;
+    align-items: flex-start;
+    text-align: justify;
+    overflow: hidden;
+    width: 100%;
+    /* max-width: 70rem; */
+    height:calc(100vh -17rem);
+    scroll-behavior: smooth;
+}
+.botsection{
+    background-color: rgba(28,30,58,1);
+    width: fit-content;
+    border-radius:1.2rem;
+}
+.userlogo{
+    height:40px;
+    margin-right: 1.5rem;
+    object-fit: cover;
+    border-radius:0.5rem;
+}
+.chatlogo{
+    height:40px;
+    margin-right: 1.5rem;
+    object-fit: cover;
+    border-radius:0.5rem;
+    animation: rotatechatlogo 5s infinite linear;
+}
+@keyframes rotatechatlogo{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg) ;
+    }
+}
+.footersection{
+    width:100%;
+    margin-top:auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.chatquery{
+   padding:0.5rem;
+   background: rgba(28,30,58,1);
+   display: flex;
+   width: 100%;
+   border-radius: 15px;
+}
+.chatquery>.inputfield, .sendbtn{
+    background: transparent;
+    border:none;
+}
+.inputfield{
+    outline:none;
+    padding:1.3rem;
+    width: 100%;
+    color:white;
+}
+.sendbtn{
+    cursor: pointer;
+    background-color: black;
+    border-radius: 20px;
+    border:none;
+    outline:none;
+}
+.sendbtn:active{
+    border-radius: 10px;
+    background-color: white;
+}
+.footersection{
+    display: flex;
+    gap:1rem;
+}
+/* Main Chat Section styling ends here */
